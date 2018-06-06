@@ -1,0 +1,454 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3309D3EFD09628C09A2B4F97 /* Pods_BiteTalkServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B4F9F6247E8384AA9ABE0B /* Pods_BiteTalkServer.framework */; };
+		C0943E2920C7ADE0009D2359 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0943E2820C7ADE0009D2359 /* User.swift */; };
+		C0AA05B020BFBDCE0070CDDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA05AF20BFBDCE0070CDDF /* AppDelegate.swift */; };
+		C0AA05B520BFBDCE0070CDDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0AA05B320BFBDCE0070CDDF /* Main.storyboard */; };
+		C0AA05B720BFBDCF0070CDDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0AA05B620BFBDCF0070CDDF /* Assets.xcassets */; };
+		C0AA05BA20BFBDCF0070CDDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0AA05B820BFBDCF0070CDDF /* LaunchScreen.storyboard */; };
+		C0AA05C220C13B580070CDDF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C0AA05C120C13B580070CDDF /* GoogleService-Info.plist */; };
+		C0AA05C420C1415C0070CDDF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA05C320C1415C0070CDDF /* LoginViewController.swift */; };
+		C0AA05C620C1419D0070CDDF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA05C520C1419D0070CDDF /* Extensions.swift */; };
+		C0AA05C820C143790070CDDF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA05C720C143790070CDDF /* MainViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		049C5BF9100462D479F777A0 /* Pods-BiteTalkServer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BiteTalkServer.release.xcconfig"; path = "Pods/Target Support Files/Pods-BiteTalkServer/Pods-BiteTalkServer.release.xcconfig"; sourceTree = "<group>"; };
+		86EA4EF366B5306DAC65ED63 /* Pods-BiteTalkServer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BiteTalkServer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BiteTalkServer/Pods-BiteTalkServer.debug.xcconfig"; sourceTree = "<group>"; };
+		C0943E2820C7ADE0009D2359 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C0AA05AC20BFBDCE0070CDDF /* BiteTalkServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BiteTalkServer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0AA05AF20BFBDCE0070CDDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C0AA05B420BFBDCE0070CDDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C0AA05B620BFBDCF0070CDDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C0AA05B920BFBDCF0070CDDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C0AA05BB20BFBDCF0070CDDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0AA05C120C13B580070CDDF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C0AA05C320C1415C0070CDDF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C0AA05C520C1419D0070CDDF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		C0AA05C720C143790070CDDF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		E1B4F9F6247E8384AA9ABE0B /* Pods_BiteTalkServer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BiteTalkServer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C0AA05A920BFBDCE0070CDDF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3309D3EFD09628C09A2B4F97 /* Pods_BiteTalkServer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		90FA7AB651DEA48681CE0F5C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E1B4F9F6247E8384AA9ABE0B /* Pods_BiteTalkServer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B838C5A90AA280AD3B1FB357 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				86EA4EF366B5306DAC65ED63 /* Pods-BiteTalkServer.debug.xcconfig */,
+				049C5BF9100462D479F777A0 /* Pods-BiteTalkServer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C0943E2520C7AC11009D2359 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C0943E2820C7ADE0009D2359 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C0943E2620C7AC29009D2359 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C0AA05C720C143790070CDDF /* MainViewController.swift */,
+				C0AA05C320C1415C0070CDDF /* LoginViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		C0943E2720C7AC63009D2359 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C0AA05C520C1419D0070CDDF /* Extensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C0AA05A320BFBDCE0070CDDF = {
+			isa = PBXGroup;
+			children = (
+				C0AA05C120C13B580070CDDF /* GoogleService-Info.plist */,
+				C0AA05AE20BFBDCE0070CDDF /* BiteTalkServer */,
+				C0AA05AD20BFBDCE0070CDDF /* Products */,
+				B838C5A90AA280AD3B1FB357 /* Pods */,
+				90FA7AB651DEA48681CE0F5C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C0AA05AD20BFBDCE0070CDDF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C0AA05AC20BFBDCE0070CDDF /* BiteTalkServer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C0AA05AE20BFBDCE0070CDDF /* BiteTalkServer */ = {
+			isa = PBXGroup;
+			children = (
+				C0AA05AF20BFBDCE0070CDDF /* AppDelegate.swift */,
+				C0AA05B320BFBDCE0070CDDF /* Main.storyboard */,
+				C0AA05B620BFBDCF0070CDDF /* Assets.xcassets */,
+				C0AA05B820BFBDCF0070CDDF /* LaunchScreen.storyboard */,
+				C0AA05BB20BFBDCF0070CDDF /* Info.plist */,
+				C0943E2720C7AC63009D2359 /* Helpers */,
+				C0943E2620C7AC29009D2359 /* ViewController */,
+				C0943E2520C7AC11009D2359 /* Model */,
+			);
+			path = BiteTalkServer;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C0AA05AB20BFBDCE0070CDDF /* BiteTalkServer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0AA05BE20BFBDCF0070CDDF /* Build configuration list for PBXNativeTarget "BiteTalkServer" */;
+			buildPhases = (
+				B537843534C397E6E2928A3A /* [CP] Check Pods Manifest.lock */,
+				C0AA05A820BFBDCE0070CDDF /* Sources */,
+				C0AA05A920BFBDCE0070CDDF /* Frameworks */,
+				C0AA05AA20BFBDCE0070CDDF /* Resources */,
+				19EFF547A1C75797E3C9851A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BiteTalkServer;
+			productName = BiteTalkServer;
+			productReference = C0AA05AC20BFBDCE0070CDDF /* BiteTalkServer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C0AA05A420BFBDCE0070CDDF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "신진욱";
+				TargetAttributes = {
+					C0AA05AB20BFBDCE0070CDDF = {
+						CreatedOnToolsVersion = 9.4;
+					};
+				};
+			};
+			buildConfigurationList = C0AA05A720BFBDCE0070CDDF /* Build configuration list for PBXProject "BiteTalkServer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C0AA05A320BFBDCE0070CDDF;
+			productRefGroup = C0AA05AD20BFBDCE0070CDDF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C0AA05AB20BFBDCE0070CDDF /* BiteTalkServer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C0AA05AA20BFBDCE0070CDDF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0AA05BA20BFBDCF0070CDDF /* LaunchScreen.storyboard in Resources */,
+				C0AA05C220C13B580070CDDF /* GoogleService-Info.plist in Resources */,
+				C0AA05B720BFBDCF0070CDDF /* Assets.xcassets in Resources */,
+				C0AA05B520BFBDCE0070CDDF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		19EFF547A1C75797E3C9851A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BiteTalkServer/Pods-BiteTalkServer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BiteTalkServer/Pods-BiteTalkServer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B537843534C397E6E2928A3A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BiteTalkServer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C0AA05A820BFBDCE0070CDDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0AA05C420C1415C0070CDDF /* LoginViewController.swift in Sources */,
+				C0AA05B020BFBDCE0070CDDF /* AppDelegate.swift in Sources */,
+				C0AA05C620C1419D0070CDDF /* Extensions.swift in Sources */,
+				C0943E2920C7ADE0009D2359 /* User.swift in Sources */,
+				C0AA05C820C143790070CDDF /* MainViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C0AA05B320BFBDCE0070CDDF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C0AA05B420BFBDCE0070CDDF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C0AA05B820BFBDCF0070CDDF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C0AA05B920BFBDCF0070CDDF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C0AA05BC20BFBDCF0070CDDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C0AA05BD20BFBDCF0070CDDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C0AA05BF20BFBDCF0070CDDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86EA4EF366B5306DAC65ED63 /* Pods-BiteTalkServer.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KPQP38DW3E;
+				INFOPLIST_FILE = BiteTalkServer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sejong.shin.BiteTalkServer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C0AA05C020BFBDCF0070CDDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 049C5BF9100462D479F777A0 /* Pods-BiteTalkServer.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KPQP38DW3E;
+				INFOPLIST_FILE = BiteTalkServer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sejong.shin.BiteTalkServer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C0AA05A720BFBDCE0070CDDF /* Build configuration list for PBXProject "BiteTalkServer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0AA05BC20BFBDCF0070CDDF /* Debug */,
+				C0AA05BD20BFBDCF0070CDDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0AA05BE20BFBDCF0070CDDF /* Build configuration list for PBXNativeTarget "BiteTalkServer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0AA05BF20BFBDCF0070CDDF /* Debug */,
+				C0AA05C020BFBDCF0070CDDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C0AA05A420BFBDCE0070CDDF /* Project object */;
+}
