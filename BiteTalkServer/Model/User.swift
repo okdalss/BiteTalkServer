@@ -22,10 +22,8 @@ class User: NSObject {
     func settingFromDic(dic: [String: Any]?) {
         print("func settingFromDic...")
         gender = dic?["gender"] as? Int
-        if let langArray = dic?["language"] as? [Int: String] {
-            for lang in langArray {
-                print(lang)
-            }
+        if let langArray = dic?["language"] as? [String] {
+            language = langArray
         }
         nickname = dic?["nickname"] as? String
         toSay = dic?["toSay"] as? String
