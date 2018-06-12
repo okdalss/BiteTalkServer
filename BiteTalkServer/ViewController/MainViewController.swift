@@ -26,12 +26,20 @@ class MainViewController: UIViewController {
         }
     }
     
-    lazy var users : [String: [String]] = [:]
+    lazy var langUsers : [String: [String]] = [:]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         addKeysToUsers()
+    }
+    
+    func addKeysToUsers() {
+        print("func addKeysToUsers")
+        for lang in languages {
+            langUsers[lang] = [""]
+        }
+        print(langUsers.keys)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -55,20 +63,11 @@ class MainViewController: UIViewController {
         }
     }
     
-    func addKeysToUsers() {
-        print("func addKeysToUsers")
-        for lang in languages {
-            users[lang] = [""]
-        }
-        print(users.keys)
-    }
-    
     func addUserByLanguage(user: User) {
         print("func addUserByLanguage...")
-                for lang in user.language! {
-                    users[lang]?.append(user.code!)
-                }
-//        print(users)
+        for lang in user.language! {
+            langUsers[lang]?.append(user.code!)
+        }
     }
     
 }
