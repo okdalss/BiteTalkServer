@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, UITableViewDataSource {
     
     var languages = ["English", "한국어 (Korean)", "中文 (Chinese)", "日本語 (Japanese)", "Español (Spanish)", "Français (French)", "Deutsche (German)",
                      "Pусский (Russian)", "Português (Portuguese)", "Italiano (Italian)", "Türkçe (Turkish)", "Nederlands (Dutch)", "العربية (Arabic)",
@@ -20,6 +20,7 @@ class MainViewController: UIViewController {
         didSet {
             if let user = allUsers.last {
                 addUserByLanguage(user: user)
+                self.usersTableview.reloadData()
             } else {
                 print("-------------------------allUsers error----------------------------")
             }
@@ -28,6 +29,7 @@ class MainViewController: UIViewController {
     }
     
     @IBOutlet weak var allusersNumLabel: UILabel!
+    @IBOutlet weak var usersTableview: UITableView!
     
     lazy var langUsers : [String: [String]] = [:]
 
@@ -35,6 +37,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         addKeysToUsers()
+        usersTableview.dataSource = self
     }
     
     func addKeysToUsers() {
@@ -72,6 +75,22 @@ class MainViewController: UIViewController {
         for lang in user.language! {
             langUsers[lang]?.append(user.code!)
         }
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return languages.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = usersTableview.dequeueReusableCell(withIdentifier: "userscell", for: indexPath)
+        cell.textLabel?.text = languages[indexPath.row]
+        cell.detailTextLabel?.text = String(describing: langUsers[languages[indexPath.row]]!.count)
+        return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let viewCont: MatchUsersViewController = segue.destination as! MatchUsersViewController
+        viewCont.langUsers = langUsers
     }
     
 }

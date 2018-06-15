@@ -17,6 +17,8 @@ class MatchUsersViewController: UIViewController, UITableViewDataSource {
                      "ภาษาไทย (Thai)", "Svenska (Swedish)", "Dansk (Danish)", "Tiếng Việt (Vietnamese)", "Norsk (Norwegin)", "Polski (Polish)",
                      "Suomi (finnish)", "Bahasa Indonesia (Indonesian)", "עִברִית (Hebrew)", "Ελληνικά (Greek)", "Română (Romanian)", "Magyar (Hungarian)", "čeština (Czech)", "Català (Caralan)", "Slovenčina (Slovak)", "Українська (Ukrainian)", "Hrvatski (Croatian)", "Hahasa Melayu (Malay)", "हिंदी (Hindi)"]
     
+    var langUsers : [String: [String]]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -36,6 +38,13 @@ class MatchUsersViewController: UIViewController, UITableViewDataSource {
         let cell = matchTableview.dequeueReusableCell(withIdentifier: "matchingcell", for: indexPath)
         cell.textLabel?.text = languages[indexPath.row]
         return cell
+    }
+    
+    func match(language: String) {
+        if let users = langUsers?[language] {
+            let numOfMatchs: Int = users.count/2 + 1
+            let shuffleUsers = users.shu
+        }
     }
 
 }

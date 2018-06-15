@@ -78,8 +78,8 @@
 		C0943E2620C7AC29009D2359 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				C0AA05C720C143790070CDDF /* MainViewController.swift */,
 				C0AA05C320C1415C0070CDDF /* LoginViewController.swift */,
+				C0AA05C720C143790070CDDF /* MainViewController.swift */,
 				C0A1820520D3950F0011DC36 /* MatchUsersViewController.swift */,
 			);
 			path = ViewController;
