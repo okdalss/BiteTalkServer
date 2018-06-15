@@ -23,8 +23,11 @@ class MainViewController: UIViewController {
             } else {
                 print("-------------------------allUsers error----------------------------")
             }
+            allusersNumLabel.text = String(describing: allUsers.count)
         }
     }
+    
+    @IBOutlet weak var allusersNumLabel: UILabel!
     
     lazy var langUsers : [String: [String]] = [:]
 
@@ -43,6 +46,7 @@ class MainViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        allUsers.removeAll()
         addUsers()
     }
 
