@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class MainViewController: UIViewController, UITableViewDataSource {
+class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var languages = ["English", "한국어 (Korean)", "中文 (Chinese)", "日本語 (Japanese)", "Español (Spanish)", "Français (French)", "Deutsche (German)",
                      "Pусский (Russian)", "Português (Portuguese)", "Italiano (Italian)", "Türkçe (Turkish)", "Nederlands (Dutch)", "العربية (Arabic)",
@@ -38,14 +38,17 @@ class MainViewController: UIViewController, UITableViewDataSource {
         // Do any additional setup after loading the view.
         addKeysToUsers()
         usersTableview.dataSource = self
+        usersTableview.delegate = self
     }
     
-    func addKeysToUsers() {
-        print("func addKeysToUsers")
+    func addKeysToUsers() {             // add key to langUsers.. make empty value and then remove value.. need new method...
+//        print("func addKeysToUsers")
         for lang in languages {
-            langUsers[lang] = [""]
+            langUsers[lang] = ["empty"]
+            if langUsers[lang]![0] == "empty" {
+                langUsers[lang]?.remove(at: 0)
+            }
         }
-        print(langUsers.keys)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -59,7 +62,7 @@ class MainViewController: UIViewController, UITableViewDataSource {
     }
     
     func addUsers() {
-        print("func addUsers...")
+//        print("func addUsers...")
         let ref = Database.database().reference().child("users").child("after_init")
         ref.observe(.childAdded) { (snap) in
             let code = snap.key
@@ -71,7 +74,7 @@ class MainViewController: UIViewController, UITableViewDataSource {
     }
     
     func addUserByLanguage(user: User) {
-        print("func addUserByLanguage...")
+//        print("func addUserByLanguage...")
         for lang in user.language! {
             langUsers[lang]?.append(user.code!)
         }
@@ -86,6 +89,11 @@ class MainViewController: UIViewController, UITableViewDataSource {
         cell.textLabel?.text = languages[indexPath.row]
         cell.detailTextLabel?.text = String(describing: langUsers[languages[indexPath.row]]!.count)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("\(languages[indexPath.row]) selected...")
+        print(langUsers[languages[indexPath.row]])
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
