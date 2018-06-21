@@ -23,6 +23,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 self.usersTableview.reloadData()
             } else {
                 print("-------------------------allUsers error----------------------------")
+                print("allusers: \(allUsers)")
             }
             allusersNumLabel.text = String(describing: allUsers.count)
         }
@@ -39,6 +40,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         addKeysToUsers()
         usersTableview.dataSource = self
         usersTableview.delegate = self
+        addUsers()
     }
     
     func addKeysToUsers() {             // add key to langUsers.. make empty value and then remove value.. need new method...
@@ -52,8 +54,8 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        allUsers.removeAll()
-        addUsers()
+//        allUsers.removeAll()
+//        addUsers()
     }
 
     override func didReceiveMemoryWarning() {
@@ -74,7 +76,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func addUserByLanguage(user: User) {
-//        print("func addUserByLanguage...")
+        print("func addUserByLanguage...")
         for lang in user.language! {
             langUsers[lang]?.append(user.code!)
         }
@@ -87,7 +89,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = usersTableview.dequeueReusableCell(withIdentifier: "userscell", for: indexPath)
         cell.textLabel?.text = languages[indexPath.row]
-        cell.detailTextLabel?.text = String(describing: langUsers[languages[indexPath.row]]!.count)
+        cell.detailTextLabel?.text = String(describing: langUsers[languages[indexPath.row]]?.count ?? 0)
         return cell
     }
     
@@ -99,6 +101,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let viewCont: MatchUsersViewController = segue.destination as! MatchUsersViewController
         viewCont.langUsers = langUsers
+//        langUsers.removeAll()
     }
     
 }

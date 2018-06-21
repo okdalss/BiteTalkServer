@@ -23,6 +23,7 @@ extension UIViewController {
 }
 
 extension Array where Element: Equatable {
+    
     static func shuffleArray(array: Array) -> Array {
 //        var items = ["A", "B", "C", "D", "E", "F", "G", "H"]
         var items = array
@@ -42,5 +43,24 @@ extension Array where Element: Equatable {
         }
         
         return items
+    }
+    
+    static func shuffleArray2(array: Array) -> Array {
+//        var items = ["A", "B", "C", "D", "E", "F", "G", "H"]
+        var items = array
+//        var shuffled = [String]();
+        var shuffled = [Any]();
+        
+        for _ in 0..<items.count
+        {
+            let rand = Int(arc4random_uniform(UInt32(items.count)))
+            
+            shuffled.append(items[rand])
+            
+            items.remove(at: rand)
+        }
+        
+//        print(shuffled)
+        return shuffled as! Array<Element>
     }
 }

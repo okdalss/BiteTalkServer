@@ -18,13 +18,7 @@ class MatchUsersViewController: UIViewController, UITableViewDataSource, UITable
                      "Suomi (finnish)", "Bahasa Indonesia (Indonesian)", "עִברִית (Hebrew)", "Ελληνικά (Greek)", "Română (Romanian)", "Magyar (Hungarian)", "čeština (Czech)", "Català (Caralan)", "Slovenčina (Slovak)", "Українська (Ukrainian)", "Hrvatski (Croatian)", "Hahasa Melayu (Malay)", "हिंदी (Hindi)"]
     
     var langUsers: [String: [String]]?
-    var shuffledusers = [String: [String]]() {
-        didSet {
-            print("shuffledusers...")
-            print(shuffledusers)
-        }
-    }
-    var couples = [(reciever: String, sender: String)]()
+    var couples = [String: [(reciever: String, sender: String)]]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,21 +51,39 @@ class MatchUsersViewController: UIViewController, UITableViewDataSource, UITable
         print("start \(language) match...")
         if let users = langUsers?[language] {
             if users.count < 2 {
-                return
+                print("user using \(language) is you alone...")
             }
-            let shuffleUsers = Array.shuffleArray(array: users)
+            if users.count == 2 {
+                couples[language]?.removeAll()
+                if couples[language]?.append((reciever: users[0], sender: users[1])) == nil {
+                    couples[language] = [(reciever: users[0], sender: users[1])]
+                }
+                if couples[language]?.append((reciever: users[1], sender: users[0])) == nil {
+                    couples[language] = [(reciever: users[1], sender: users[0])]
+                }
+                
+            }
+//            let shuffleUsers = Array.shuffleArray(array: users)
+            let shuffleUsers = Array.shuffleArray2(array: users)
             var i = 0
-            while i < (users.count-1) {
-                couples.append((shuffleUsers[i], shuffleUsers[i+1]))
-                i = i+1
-                if i == (users.count - 1) {
-                    couples.append((shuffleUsers[i], shuffleUsers[0]))
+            if users.count > 2 {
+                couples[language]?.removeAll()
+                while i < (users.count-1) {
+                    if couples[language]?.append((shuffleUsers[i], shuffleUsers[i+1])) == nil {
+                        couples[language] = [(shuffleUsers[i], shuffleUsers[i+1])]
+                    }
+                    i = i+1
+                    if i == (users.count - 1) {
+                        if couples[language]?.append((shuffleUsers[i], shuffleUsers[0])) == nil {
+                            couples[language] = [(shuffleUsers[i], shuffleUsers[0])]
+                        }
+                    }
                 }
             }
-            shuffledusers[language] = shuffleUsers
+            langUsers![language] = shuffleUsers
         }
         print("end \(language) match...")
-        print(couples)
+//        print(couples[language])
     }
 
 }
