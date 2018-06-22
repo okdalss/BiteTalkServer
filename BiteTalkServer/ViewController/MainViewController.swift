@@ -32,25 +32,13 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var allusersNumLabel: UILabel!
     @IBOutlet weak var usersTableview: UITableView!
     
-    lazy var langUsers : [String: [String]] = [:]
+    var langUsers = [String: [String]]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        addKeysToUsers()
         usersTableview.dataSource = self
         usersTableview.delegate = self
         addUsers()
-    }
-    
-    func addKeysToUsers() {             // add key to langUsers.. make empty value and then remove value.. need new method...
-//        print("func addKeysToUsers")
-        for lang in languages {
-            langUsers[lang] = ["empty"]
-            if langUsers[lang]![0] == "empty" {
-                langUsers[lang]?.remove(at: 0)
-            }
-        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -76,9 +64,11 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func addUserByLanguage(user: User) {
-        print("func addUserByLanguage...")
+//        print("func addUserByLanguage...")
         for lang in user.language! {
-            langUsers[lang]?.append(user.code!)
+            if langUsers[lang]?.append(user.code!) == nil {
+                langUsers[lang] = [user.code!]
+            }
         }
     }
     
@@ -101,7 +91,6 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let viewCont: MatchUsersViewController = segue.destination as! MatchUsersViewController
         viewCont.langUsers = langUsers
-//        langUsers.removeAll()
     }
     
 }

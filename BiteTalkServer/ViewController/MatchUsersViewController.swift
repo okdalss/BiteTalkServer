@@ -63,7 +63,6 @@ class MatchUsersViewController: UIViewController, UITableViewDataSource, UITable
                 }
                 
             }
-//            let shuffleUsers = Array.shuffleArray(array: users)
             let shuffleUsers = Array.shuffleArray2(array: users)
             var i = 0
             if users.count > 2 {
