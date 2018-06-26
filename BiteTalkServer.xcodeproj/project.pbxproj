@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3309D3EFD09628C09A2B4F97 /* Pods_BiteTalkServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B4F9F6247E8384AA9ABE0B /* Pods_BiteTalkServer.framework */; };
+		C0012E4D20E0DBAC003A84BF /* AllMatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0012E4C20E0DBAC003A84BF /* AllMatchViewController.swift */; };
 		C0943E2920C7ADE0009D2359 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0943E2820C7ADE0009D2359 /* User.swift */; };
 		C0A1820620D3950F0011DC36 /* MatchUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A1820520D3950F0011DC36 /* MatchUsersViewController.swift */; };
 		C0AA05B020BFBDCE0070CDDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA05AF20BFBDCE0070CDDF /* AppDelegate.swift */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		049C5BF9100462D479F777A0 /* Pods-BiteTalkServer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BiteTalkServer.release.xcconfig"; path = "Pods/Target Support Files/Pods-BiteTalkServer/Pods-BiteTalkServer.release.xcconfig"; sourceTree = "<group>"; };
 		86EA4EF366B5306DAC65ED63 /* Pods-BiteTalkServer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BiteTalkServer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BiteTalkServer/Pods-BiteTalkServer.debug.xcconfig"; sourceTree = "<group>"; };
+		C0012E4C20E0DBAC003A84BF /* AllMatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMatchViewController.swift; sourceTree = "<group>"; };
 		C0943E2820C7ADE0009D2359 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C0A1820520D3950F0011DC36 /* MatchUsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchUsersViewController.swift; sourceTree = "<group>"; };
 		C0AA05AC20BFBDCE0070CDDF /* BiteTalkServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BiteTalkServer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +83,7 @@
 				C0AA05C320C1415C0070CDDF /* LoginViewController.swift */,
 				C0AA05C720C143790070CDDF /* MainViewController.swift */,
 				C0A1820520D3950F0011DC36 /* MatchUsersViewController.swift */,
+				C0012E4C20E0DBAC003A84BF /* AllMatchViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				C0AA05B020BFBDCE0070CDDF /* AppDelegate.swift in Sources */,
 				C0AA05C620C1419D0070CDDF /* Extensions.swift in Sources */,
 				C0943E2920C7ADE0009D2359 /* User.swift in Sources */,
+				C0012E4D20E0DBAC003A84BF /* AllMatchViewController.swift in Sources */,
 				C0AA05C820C143790070CDDF /* MainViewController.swift in Sources */,
 				C0A1820620D3950F0011DC36 /* MatchUsersViewController.swift in Sources */,
 			);

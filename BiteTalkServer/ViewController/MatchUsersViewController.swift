@@ -18,7 +18,7 @@ class MatchUsersViewController: UIViewController, UITableViewDataSource, UITable
                      "Suomi (finnish)", "Bahasa Indonesia (Indonesian)", "עִברִית (Hebrew)", "Ελληνικά (Greek)", "Română (Romanian)", "Magyar (Hungarian)", "čeština (Czech)", "Català (Caralan)", "Slovenčina (Slovak)", "Українська (Ukrainian)", "Hrvatski (Croatian)", "Hahasa Melayu (Malay)", "हिंदी (Hindi)"]
     
     var langUsers: [String: [String]]?
-    var couples = [String: [(reciever: String, sender: String)]]()
+    var couples = [String: [(sender: String, reciever: String)]]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,18 +48,18 @@ class MatchUsersViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func match(language: String) {
-        print("start \(language) match...")
+//        print("start \(language) match...")
         if let users = langUsers?[language] {
             if users.count < 2 {
-                print("user using \(language) is you alone...")
+//                print("user using \(language) is you alone...")
             }
             if users.count == 2 {
                 couples[language]?.removeAll()
-                if couples[language]?.append((reciever: users[0], sender: users[1])) == nil {
-                    couples[language] = [(reciever: users[0], sender: users[1])]
+                if couples[language]?.append((sender: users[0], reciever: users[1])) == nil {
+                    couples[language] = [(sender: users[0], reciever: users[1])]
                 }
-                if couples[language]?.append((reciever: users[1], sender: users[0])) == nil {
-                    couples[language] = [(reciever: users[1], sender: users[0])]
+                if couples[language]?.append((sender: users[1], reciever: users[0])) == nil {
+                    couples[language] = [(sender: users[1], reciever: users[0])]
                 }
                 
             }
@@ -81,8 +81,21 @@ class MatchUsersViewController: UIViewController, UITableViewDataSource, UITable
             }
             langUsers![language] = shuffleUsers
         }
-        print("end \(language) match...")
+//        print("end \(language) match...")
 //        print(couples[language])
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "allmatch" {
+            for lang in languages {
+                match(language: lang)
+            }
+        }
+    }
+    
+    
+    
+    
+    
 
 }
